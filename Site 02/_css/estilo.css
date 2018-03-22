@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+body {/*define estilos para o corpo da página*/
+    background-color: #dddddd;/*define a cor de fundo da página*/
+    color: rgba(0,0,0,1);/*define a cor do texto da página*/
+}
+
+div#interface {/*edita todas os estilos para o container div interface (só alterra o que estiver dentro do container)*/
+    width: 1200px;
+    background-color: #ffffff;
+    margin: -20px auto 0px auto;/*define a margem do container div dentro da pagina do site*/
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);/*cria uma sombra envolta do objeto*/
+    padding: 10px /*10px 10px 10px ;/*define as margens dentro do container do objeto; caso todas as bordas sejam iguais, basta colocar o valor apenas uma vez e ele será aplicado a todos*/
+}
+
+p{/*define a formatação para todos os paragrafos*/
+    text-align: justify;/*define o alinhamento do texto*/
+    text-indent: 40px;/*define a identração do texto*/
+    }
+header#cabecalho img#icone {
+    position: absolute;
+    left: 1140px;
+    top: 40px;
+}
+
+header#cabecalho {
+
+}
+
+/*formatação de imagens com legendas*/
+figure.foto-legenda { /*aqui são definidas as configurações de estilo que serão usadas na classe foto-legenda*/
+    position: relative;/*define uma posição relativa dentro do corpo da página*/
+    border: 9px solid white;
+    box-shadow: 1px 1px 4px black;
+}
+figure.foto-legenda img{/*aqui é definido o estilo de tudo que for imagen*/
+    width: 100%;
+    height: 100%;
+
+}
+figure.foto-legenda figcaption {/*define a formatação de estilo para a legenda*/
+    opacity: 0;/*define a transparencia/opacidade da legenda/caixa de legenda*/
+    position: absolute;/*define uma posição absoluta dentro do container figure onde o figurecaption é seu filho*/
+    top: 0px;
+    background-color: rgba(0,0,0,.4);
+    color: white;/*define a cor da letra da legenda*/
+    width: 100%;/*define a largura do legenda/fundo*/
+    height: 100%;/*define a altura da legenda*/
+    padding: 10px;/*cria um espaço dentro da legenda*/
+    box-sizing: border-box;/*cria um box dentro da borda*/
+    transition: opacity 1s;
+
+}
+
+figure.foto-legenda:hover figcaption{/*define que ação vai acontecer com o objeto foto-legenda quando o mouse e passado por cima*/
+opacity: 1;
+}
+/*Formatação do menu*/
+nav#menu ul {
+    display: block;/*um bloco que pode flutuar pela tela*/
+}
+
+nav#menu {/*vai ditar os parametros de edição para o menu de navegação / para os itens ordenados*/
+    list-style: none;
+    text-transform: uppercase;/*transforma tudo em maiusculo*/
+    position: absolute; /*para que o objeto possa pasasr por cima do documento// de modo que o absoluta emgloba toda a janela e o a outra somente dentro do container*/
+    top:-20px;/*define a altura do objeto dentro do site*/
+    left: 650px; /* define o deslocamento para a direita dentro do site*/
+}
+nav#menu li{/*define os parametros para os items da lista*/
+    display: inline-block;/*faz com que um bloco selecionado seja exibido na mesma linha*/
+    background-color: #dddddd;/*define a cor de fundo*/
+    padding: 10px;/*almenta o espaço dentro da caixa de cor de fundo*/
+    margin: 2px;/*define a margen da caixa de cor/objeto*/
+    transition: background-color 1s;/*define o padrão de transição configurado no hover*/
+    -webkit-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    transition: background-color 1s;
+}
+
+nav#menu li:hover {/*o hover dita o efeito que é dado quando se passa o mouse por cima*/
+    background-color: #606060;
+
+}
+
+nav#menu h1{/*faz com que os navegaores recnhecao como o menu principal mesmo com ele oculto*/
+    display: none;/*esconde o menu principal*/
+}
+nav#menu a { /*define os estilos para o nave de id referenciado e que tiver a tag a(ancora)*/
+    color: #000; /*definindo a cor do texto do link*/
+    text-decoration: none; /*definindo o estilo de sublinhado e etc*/
+
+}
+nav#menu a:hover { /*define o que vai acontecer quando a tag a(de links), quando se passar o mouse sobre ele*/
+    color: #ffffff; /*define a cor que o link vai mudar quando o mouse passar por cima*/
+    /*text-decoration: underline;*/ /*define que o texto do link vai ficar sublinhado quando o mouse passar por cima*/
+
+}
